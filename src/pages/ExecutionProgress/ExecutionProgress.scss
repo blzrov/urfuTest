@@ -1,0 +1,16 @@
+.executionProgress {
+  margin-top: 94px;
+  ul {
+    display: flex;
+    overflow-x: scroll;
+    list-style: none;
+    li {
+      width: 232px;
+      padding-right: 40px;
+      :first-child {
+        font-size: 18;
+        color: #fe4a71;
+      }
+    }
+  }
+}

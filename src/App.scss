@@ -1,0 +1,11 @@
+.App {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  align-items: flex-start;
+}
+
+.wrapper {
+  margin-top: 20px;
+  margin-left: 85px;
+  margin-right: 85px;
+}
