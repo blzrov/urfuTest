@@ -1,4 +1,5 @@
 import "./Header.scss";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -18,7 +19,9 @@ export default function Header() {
         <p className="top">Программа развития УрФУ на 2021-2030 годы</p>
         <p className="bottom">Исследовательское лидерство</p>
       </div>
-      <b className="other">Другие программы</b>
+      <Link to="Другие программы" className="other">
+        <b>Другие программы</b>
+      </Link>
     </div>
   );
 }

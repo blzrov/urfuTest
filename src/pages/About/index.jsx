@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Main.scss";
+import "./index.scss";
 import ExecutionProgress from "./ExecutionProgress";
 import Projects from "./Projects";
 import Budget from "./Budget";

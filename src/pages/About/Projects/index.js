@@ -1,10 +1,10 @@
 import React from "react";
 import "./Projects.scss";
-import SelectYear from "../../components/SelectYear";
-import TableWithOrder from "../../components/TableWithOrder";
-import TableNoneOrder from "../../components/TableNoneOrder";
+import SelectYear from "../../../components/SelectYear";
+import TableWithOrder from "../../../components/TableWithOrder";
+import TableNoneOrder from "../../../components/TableNoneOrder";
 
-import Accordion from "../../components/Accordion";
+import Accordion from "../../../components/Accordion";
 
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
@@ -17,21 +17,19 @@ export default function Projects() {
       <SelectYear />
       <h2>Плановое количество проектов программы - 215</h2>
       <h2>Одобренных проектов на ЭГ - 118</h2>
-      <Accordion
-        title="Детализация по стратегическим проектам"
-        body={<TableWithOrder />}
-      />
+      <Accordion title="Детализация по стратегическим проектам">
+        <TableWithOrder />
+      </Accordion>
 
-      <Accordion
-        title="Детализация по типу финансирования"
-        body={<TableNoneOrder />}
-      />
+      <Accordion title="Детализация по типу финансирования">
+        <TableNoneOrder />
+      </Accordion>
 
       <h2>Одобренных портфелей проектов на ЭГ - 97</h2>
 
-      <Accordion title="Детализация по стратегическим проектам" />
+      <Accordion title="Детализация по стратегическим проектам"></Accordion>
 
-      <Accordion title="Детализация по типу финансирования" />
+      <Accordion title="Детализация по типу финансирования"></Accordion>
 
       <h2>Распределение проектов по типам к общему числу проектов</h2>
       <p>Период</p>

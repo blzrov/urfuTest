@@ -1,8 +1,8 @@
 import React from "react";
 import "./Budget.scss";
-import SelectYear from "../../components/SelectYear";
+import SelectYear from "../../../components/SelectYear";
 
-import Accordion from "../../components/Accordion";
+import Accordion from "../../../components/Accordion";
 
 import {
   Chart as ChartJS,
@@ -39,19 +39,16 @@ export default function Budget() {
         <First />
       </div>
       <h2>Детализация</h2>
-      <Accordion
-        title="По соглашениям"
-        body={
-          <div style={{ display: "flex", justifyContent: "flex-start" }}>
-            <div style={{ width: "50%" }}>
-              <First />
-            </div>
-            <div style={{ width: "50%" }}>
-              <First />
-            </div>
+      <Accordion title="По соглашениям">
+        <div style={{ display: "flex", justifyContent: "flex-start" }}>
+          <div style={{ width: "50%" }}>
+            <First />
           </div>
-        }
-      />
+          <div style={{ width: "50%" }}>
+            <First />
+          </div>
+        </div>
+      </Accordion>
 
       <h2>
         Одобренные средста в проектах определенного типа от общего бюджета

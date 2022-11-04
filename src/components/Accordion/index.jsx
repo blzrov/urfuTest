@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./Accordion.scss"
+import "./Accordion.scss";
 
-export default function Accordion({ title, body }) {
+export default function Accordion({ title, children }) {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="accordion">
@@ -21,11 +21,11 @@ export default function Accordion({ title, body }) {
           <path
             d="M32 17.3027L16.5 1.80274L1 17.3027"
             stroke="#7F7F7F"
-            stroke-width="2"
+            strokeWidth="2"
           />
         </svg>
       </div>
-      {isOpen && <div className="accordion_body">{body}</div>}
+      {isOpen && <div className="accordion_body">{children}</div>}
     </div>
   );
 }

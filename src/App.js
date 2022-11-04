@@ -1,19 +1,26 @@
 import React from "react";
 import "./App.scss";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Sidebar from "./layout/Sidebar";
 import Header from "./layout/Header";
-import Main from "./pages/Main";
+import About from "./pages/About";
+import ErrorPage from "./pages/ErrorPage";
 
 function App() {
   return (
     <div className="App">
-      <Sidebar />
-      <div>
-        <Header />
-        <div className="wrapper">
-          <Main />
+      <BrowserRouter>
+        <Sidebar />
+        <div>
+          <Header />
+          <div className="wrapper">
+            <Routes>
+              <Route path="/" element={<About />} />
+              <Route path="*" element={<ErrorPage />} />
+            </Routes>
+          </div>
         </div>
-      </div>
+      </BrowserRouter>
     </div>
   );
 }
