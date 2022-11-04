@@ -2,7 +2,7 @@ import React from "react";
 import "./App.scss";
 import Sidebar from "./layout/Sidebar";
 import Header from "./layout/Header";
-import Main from "./pages/Page";
+import Main from "./pages/Main";
 
 function App() {
   return (

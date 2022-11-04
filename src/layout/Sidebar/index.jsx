@@ -3,10 +3,13 @@ import "./Sidebar.scss";
 export default function Sidebar() {
   return (
     <div className="sidebar">
+      <img src={require("../../img/urfu_logo.png")} alt="urfu_logo" />
       <ul>
         <li>
           <h3>О программе</h3>
-          <li>Ключевые индикаторы программы</li>
+          <ul>
+            <li>Ключевые индикаторы программы</li>
+          </ul>
         </li>
         <li>
           <h3>Новости</h3>
@@ -16,6 +19,9 @@ export default function Sidebar() {
         </li>
         <li>
           <h3>Управление бюджетом</h3>
+          {/* <ul>
+            <li>Отчеты по бюджету</li>
+          </ul> */}
         </li>
         <li>
           <h3>Стратегические проекты</h3>

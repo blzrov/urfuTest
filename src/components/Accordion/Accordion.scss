@@ -1,0 +1,16 @@
+.accordion_header {
+  border: 3px #c5d1f8 solid;
+  position: relative;
+  color: #424242;
+  font-size: 16;
+  font-weight: 600;
+  background-color: #e5eeff;
+  cursor: pointer;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  .open {
+    transform-origin: center center;
+    transform: rotate(180deg);
+  }
+}

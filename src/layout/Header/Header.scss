@@ -2,12 +2,30 @@
   * {
     margin: 0;
   }
+  padding: 60px 48px 24px 0;
   display: flex;
   align-items: center;
-  padding-right: 48px;
+  box-sizing: border-box;
   color: white;
   background-color: #090065;
+  background-image: url("../../img/header_background.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 20%;
+  .logo {
+    padding-right: 20px;
+  }
   .red {
     color: #ea0029;
+  }
+  .other {
+    margin-left: auto;
+    font-size: 16pxF;
+  }
+  .top {
+    font-size: 24px;
+  }
+  .bottom {
+    font-size: 16px;
   }
 }

@@ -1,0 +1,23 @@
+.main {
+  .back {
+    margin-bottom: 24px;
+  }
+
+  .title {
+    margin-bottom: 27px;
+    font-size: 24px;
+    color: #0c0065;
+  }
+
+  .nav {
+    display: flex;
+    cursor: pointer;
+    .nav_item {
+      padding: 10px;
+      border-bottom: #d4d4d4 1px solid;
+      &.current {
+        border-bottom: #424242 4px solid;
+      }
+    }
+  }
+}
