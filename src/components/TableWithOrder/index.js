@@ -1,6 +1,7 @@
 import "./TableWithOrder.scss";
 
 export default function TableWithOrder() {
+
   return (
     <table className="tableWithOrder">
       <thead>

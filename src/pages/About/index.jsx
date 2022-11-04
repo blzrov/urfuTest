@@ -5,7 +5,7 @@ import Projects from "./Projects";
 import Budget from "./Budget";
 
 export default function Main() {
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(2);
 
   return (
     <div className="main">

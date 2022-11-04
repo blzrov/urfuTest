@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "./Accordion.scss";
 
-export default function Accordion({ title, children }) {
+export default function Accordion({ blue, title, children }) {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="accordion">
       <div
         onClick={() => setIsOpen((prev) => !prev)}
-        className="accordion_header"
+        className={blue ? "accordion_header blue" : "accordion_header"}
       >
         <span>{title}</span>
         <svg

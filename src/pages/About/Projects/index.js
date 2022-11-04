@@ -17,11 +17,11 @@ export default function Projects() {
       <SelectYear />
       <h2>Плановое количество проектов программы - 215</h2>
       <h2>Одобренных проектов на ЭГ - 118</h2>
-      <Accordion title="Детализация по стратегическим проектам">
+      <Accordion blue title="Детализация по стратегическим проектам">
         <TableWithOrder />
       </Accordion>
 
-      <Accordion title="Детализация по типу финансирования">
+      <Accordion blue title="Детализация по типу финансирования">
         <TableNoneOrder />
       </Accordion>
 

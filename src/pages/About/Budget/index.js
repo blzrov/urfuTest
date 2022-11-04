@@ -39,7 +39,7 @@ export default function Budget() {
         <First />
       </div>
       <h2>Детализация</h2>
-      <Accordion title="По соглашениям">
+      <Accordion blue title="По соглашениям">
         <div style={{ display: "flex", justifyContent: "flex-start" }}>
           <div style={{ width: "50%" }}>
             <First />
@@ -53,7 +53,7 @@ export default function Budget() {
       <h2>
         Одобренные средста в проектах определенного типа от общего бюджета
       </h2>
-      <div style={{ width: "100%" }}>
+      <div style={{ width: "100%", height: "512px" }}>
         <Second />
       </div>
     </div>

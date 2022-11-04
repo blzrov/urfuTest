@@ -13,7 +13,9 @@
     display: flex;
     cursor: pointer;
     .nav_item {
-      padding: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 10px 15px;
       border-bottom: #d4d4d4 1px solid;
       &.current {
         border-bottom: #424242 4px solid;

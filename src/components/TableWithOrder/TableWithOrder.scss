@@ -1,4 +1,19 @@
 .tableWithOrder {
   width: 100%;
   text-align: center;
+  border-collapse: collapse;
+  th {
+    border-bottom: 1px solid #212529;
+    padding-top: 6px;
+    padding-left: 12px;
+    padding-bottom: 14px;
+    font-weight: 600;
+    line-height: 20px;
+  }
+  td {
+    line-height: 20px;
+    padding: 0 12px 12px 12px;
+    border-bottom: 1px solid #d4d4d4;
+    max-width: 285px !important;
+  }
 }
