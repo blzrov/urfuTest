@@ -1,7 +1,4 @@
 .header {
-  * {
-    margin: 0;
-  }
   padding: 60px 48px 24px 0;
   display: flex;
   align-items: center;
@@ -12,24 +9,30 @@
   background-repeat: no-repeat;
   background-position: right;
   background-size: 20%;
-  .logo {
-    padding-right: 20px;
-  }
-  .red {
-    color: #ea0029;
-  }
+}
 
-  .top {
-    font-size: 24px;
-  }
-  .bottom {
-    font-size: 16px;
-  }
-  .other {
-    margin-left: auto;
-    font-size: 16px;
-    font-weight: 600;
-    color: white;
-    text-decoration: none;
-  }
+.logo {
+  padding-right: 20px;
+}
+
+.red {
+  color: #ea0029;
+}
+
+.top {
+  margin: 0;
+  font-size: 24px;
+}
+
+.bottom {
+  margin: 0;
+  font-size: 16px;
+}
+
+.other {
+  margin-left: auto;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
 }

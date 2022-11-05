@@ -1,0 +1,29 @@
+.executionProgress {
+  margin-top: 94px;
+}
+
+.ul {
+  display: flex;
+  overflow-x: auto;
+  list-style: none;
+}
+
+.li {
+  padding-right: 40px;
+  min-width: 216px;
+}
+
+.b {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fe4a71;
+}
+
+.behind {
+  color: #7f7f7f;
+}
+
+.p {
+  font-size: 16px;
+  line-height: 22px;
+}

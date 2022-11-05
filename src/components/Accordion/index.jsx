@@ -1,17 +1,21 @@
 import React, { useState } from "react";
-import "./Accordion.scss";
+import styles from "./Accordion.module.css";
 
 export default function Accordion({ blue, title, children }) {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="accordion">
+    <div className={styles.accordion}>
       <div
         onClick={() => setIsOpen((prev) => !prev)}
-        className={blue ? "accordion_header blue" : "accordion_header"}
+        className={
+          blue
+            ? `${styles.accordion_header + " " + styles.blue}`
+            : `${styles.accordion_header}`
+        }
       >
         <span>{title}</span>
         <svg
-          className={!isOpen ? "open" : null}
+          className={!isOpen ? `${styles.open}` : null}
           width="33"
           height="19"
           viewBox="0 0 33 19"
@@ -25,7 +29,7 @@ export default function Accordion({ blue, title, children }) {
           />
         </svg>
       </div>
-      {isOpen && <div className="accordion_body">{children}</div>}
+      {isOpen && <div>{children}</div>}
     </div>
   );
 }

@@ -5,10 +5,7 @@ import TableWithOrder from "../../../components/TableWithOrder";
 import TableNoneOrder from "../../../components/TableNoneOrder";
 
 import Accordion from "../../../components/Accordion";
-
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
-import { Doughnut } from "react-chartjs-2";
-ChartJS.register(ArcElement, Tooltip, Legend);
+import Doughnut from "../../../components/Chart/Doughnut";
 
 export default function Projects() {
   return (
@@ -20,46 +17,25 @@ export default function Projects() {
       <Accordion blue title="Детализация по стратегическим проектам">
         <TableWithOrder />
       </Accordion>
-
       <Accordion blue title="Детализация по типу финансирования">
         <TableNoneOrder />
       </Accordion>
-
       <h2>Одобренных портфелей проектов на ЭГ - 97</h2>
-
       <Accordion title="Детализация по стратегическим проектам">
         Тут ничего нет
       </Accordion>
-
       <Accordion title="Детализация по типу финансирования">
         Тут ничего нет
       </Accordion>
-
       <h2>Распределение проектов по типам к общему числу проектов</h2>
       <p>Период</p>
       <SelectYear />
-      <div style={{ width: "25%" }}>
-        <Chart />
-      </div>
+      <Doughnut data={DefaultDoughnutData} />
     </div>
   );
 }
 
-function Chart() {
-  const options = {
-    responsive: true,
-    plugins: {
-      legend: {
-        display: true,
-        position: "right",
-      },
-    },
-  };
-
-  return <Doughnut width={130} height={50} data={data} options={options} />;
-}
-
-const data = {
+const DefaultDoughnutData = {
   labels: [
     "Научный",
     "Организационный",

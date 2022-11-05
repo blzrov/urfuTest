@@ -1,26 +1,24 @@
 import React from "react";
-import "./Budget.scss";
+import styles from "./Budget.module.css";
 import SelectYear from "../../../components/SelectYear";
 import Accordion from "../../../components/Accordion";
-import StackedBar from "../../../components/Bars/StackedBar";
-import DefaultBar from "../../../components/Bars/DefaultBar";
+import StackedBar from "../../../components/Chart/StackedBar";
+import DefaultBar from "../../../components/Chart/DefaultBar";
 
 export default function Budget() {
   return (
-    <div className="budget">
+    <div className={styles.budget}>
       <p>Период</p>
-      <div
-        style={{ display: "flex", alignItems: "center", marginBottom: "42px" }}
-      >
+      <div className={styles.period}>
         <SelectYear />
-        <span style={{ paddingLeft: "20px" }}>
+        <span className={styles.info}>
           *Информация представлена по состоянию на 20.09.2022
         </span>
       </div>
       <StackedBar data={StackedBarData} />
       <h2>Детализация</h2>
       <Accordion blue title="По соглашениям">
-        <div style={{ display: "flex", justifyContent: "flex-start" }}>
+        <div className={styles.Stackedwrapper}>
           <StackedBar data={StackedBarData} />
           <StackedBar data={StackedBarData} />
         </div>

@@ -22,13 +22,13 @@ export default function DefaultBar({ data }) {
   const options = {
     maintainAspectRatio: false,
     plugins: {
-      legend: {
-        position: "top",
-      },
       title: {
         display: true,
         text: "Бюджет, млн. руб",
         position: "left",
+      },
+      legend: {
+        position: "top",
       },
     },
   };

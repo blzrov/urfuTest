@@ -1,58 +1,64 @@
-import "./TableWithOrder.scss";
+import styles from "./TableWithOrder.module.css";
 
 export default function TableWithOrder() {
   return (
-    <table className="tableWithOrder">
+    <table className={styles.tableWithOrder}>
       <thead>
         <tr>
-          <th style={{ width: "60px" }}>№</th>
-          <th style={{ textAlign: "start", width: "270px" }}>Направления СП</th>
-          <th>
-            <div className="mx">Плановое количество проектов</div>
+          <th className={styles.th + " " + styles.width60}>№</th>
+          <th className={styles.th + " " + styles.tac + " " + styles.width270}>
+            Направления СП
           </th>
-          <th>
-            <div className="mx">Одобренное количество проектов на ЭГ</div>
+          <th className={styles.th}>
+            <div className={styles.mx}>Плановое количество проектов</div>
+          </th>
+          <th className={styles.th}>
+            <div className={styles.mx}>
+              Одобренное количество проектов на ЭГ
+            </div>
           </th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>1.</td>
-          <td style={{ textAlign: "start" }}>
+          <td className={styles.td}>1.</td>
+          <td className={styles.td + " " + styles.tac}>
             Материалы и технологии для водородной и ядерной энергетики
           </td>
-          <td>3</td>
-          <td className="bold">2</td>
+          <td className={styles.td}>3</td>
+          <td className={styles.bold + " " + styles.td}>2</td>
         </tr>
         <tr>
-          <td>2.</td>
-          <td style={{ textAlign: "start" }}>
+          <td className={styles.td}>2.</td>
+          <td className={styles.td + " " + styles.tac}>
             Дизайн и технологии функциональных материалов и систем
           </td>
-          <td>9</td>
-          <td className="bold">10</td>
+          <td className={styles.td}>9</td>
+          <td className={styles.bold + " " + styles.td}>10</td>
         </tr>
         <tr>
-          <td>3.</td>
-          <td style={{ textAlign: "start" }}>
+          <td className={styles.td}>3.</td>
+          <td className={styles.td + " " + styles.tac}>
             Благополучие человека в условиях цифровой трансформации
           </td>
-          <td>12</td>
-          <td className="bold">11</td>
+          <td className={styles.td}>12</td>
+          <td className={styles.bold + " " + styles.td}>11</td>
         </tr>
         <tr>
-          <td>4.</td>
-          <td style={{ textAlign: "start" }}>Академическое превосходство</td>
-          <td>27</td>
-          <td className="bold">79</td>
+          <td className={styles.td}>4.</td>
+          <td className={styles.td + " " + styles.tac}>
+            Академическое превосходство
+          </td>
+          <td className={styles.td}>27</td>
+          <td className={styles.td + " " + styles.bold}>79</td>
         </tr>
         <tr>
-          <td>5.</td>
-          <td style={{ textAlign: "start" }}>
+          <td className={styles.td}>5.</td>
+          <td className={styles.td + " " + styles.tac}>
             Образование: кадры для научно-технологического прорыва
           </td>
-          <td>15</td>
-          <td className="bold">16</td>
+          <td className={styles.td}>15</td>
+          <td className={styles.bold + " " + styles.td}>16</td>
         </tr>
       </tbody>
     </table>

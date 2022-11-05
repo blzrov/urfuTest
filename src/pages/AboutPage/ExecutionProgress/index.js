@@ -1,14 +1,20 @@
 import React from "react";
-import "./ExecutionProgress.scss";
+import styles from "./ExecutionProgress.module.css";
 
 export default function ExecutionProgress() {
   return (
-    <div className="executionProgress">
-      <ul>
+    <div className={styles.executionProgress}>
+      <ul className={styles.ul}>
         {data.map((elem, index) => (
-          <li key={index} className={elem.isPassed && "behind"}>
-            <b>{elem.title}</b>
-            <p>{elem.text}</p>
+          <li key={index} className={styles.li}>
+            <b
+              className={
+                elem.isPassed ? `${styles.b} ${styles.behind}` : `${styles.b}`
+              }
+            >
+              {elem.title}
+            </b>
+            <p className={styles.p}>{elem.text}</p>
           </li>
         ))}
       </ul>

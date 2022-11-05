@@ -1,0 +1,17 @@
+.budget {
+  margin-top: 24px;
+}
+.period {
+  display: flex;
+  align-items: center;
+  margin-bottom: 42px;
+}
+
+.info {
+  padding-left: 20px;
+}
+
+.Stackedwrapper {
+  display: flex;
+  justify-content: flex-start;
+}

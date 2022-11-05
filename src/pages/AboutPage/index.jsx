@@ -1,19 +1,24 @@
 import React, { useState } from "react";
-import "./index.scss";
+import styles from "./index.module.css";
 import ExecutionProgress from "./ExecutionProgress";
 import Projects from "./Projects";
 import Budget from "./Budget";
 
 export default function Main() {
+  console.log(styles);
   const [page, setPage] = useState(1);
 
   return (
-    <div className="main">
-      <div className="back">&lt; Вернуться назад</div>
-      <div className="title">Ключевые индикаторы программы</div>
-      <div className="nav">
+    <div>
+      <div className={styles.back}>&lt; Вернуться назад</div>
+      <div className={styles.title}>Ключевые индикаторы программы</div>
+      <div className={styles.nav}>
         <div
-          className={page === 1 ? "nav_item current" : "nav_item"}
+          className={
+            page === 1
+              ? `${styles.nav_item + " " + styles.nav_item_current}`
+              : `${styles.nav_item}`
+          }
           onClick={() => {
             setPage(1);
           }}
@@ -22,7 +27,11 @@ export default function Main() {
         </div>
 
         <div
-          className={page === 2 ? "nav_item current" : "nav_item"}
+          className={
+            page === 2
+              ? `${styles.nav_item + " " + styles.nav_item_current}`
+              : `${styles.nav_item}`
+          }
           onClick={() => {
             setPage(2);
           }}
@@ -31,7 +40,11 @@ export default function Main() {
         </div>
 
         <div
-          className={page === 3 ? "nav_item current" : "nav_item"}
+          className={
+            page === 3
+              ? `${styles.nav_item + " " + styles.nav_item_current}`
+              : `${styles.nav_item}`
+          }
           onClick={() => {
             setPage(3);
           }}

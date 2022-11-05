@@ -1,18 +1,18 @@
-import "./Sidebar.scss";
+import styles from "./Sidebar.module.css";
 import { NavLink } from "react-router-dom";
 
 export default function Sidebar() {
   return (
-    <div className="sidebar">
+    <div className={styles.sidebar}>
       <img
-        className="img"
+        className={styles.img}
         src={require("../../img/urfu_logo.png")}
         alt="urfu_logo"
       />
-      <ul className="ul">
-        <li className="li">
+      <ul className={styles.ul}>
+        <li className={styles.li}>
           <NavLink
-            className="NavLink"
+            className={styles.NavLink}
             to="/"
             style={({ isActive }) =>
               isActive
@@ -28,41 +28,41 @@ export default function Sidebar() {
             <li>Ключевые индикаторы программы</li>
           </ul> */}
         </li>
-        <li className="li">
-          <NavLink className="NavLink" to="Новости">
+        <li className={styles.li}>
+          <NavLink className={styles.NavLink} to="Новости">
             Новости
           </NavLink>
         </li>
-        <li className="li">
-          <NavLink className="NavLink" to="Документы">
+        <li className={styles.li}>
+          <NavLink className={styles.NavLink} to="Документы">
             Документы
           </NavLink>
         </li>
-        <li className="li">
-          <NavLink className="NavLink" to="Управление бюджетом">
+        <li className={styles.li}>
+          <NavLink className={styles.NavLink} to="Управление бюджетом">
             Управление бюджетом
           </NavLink>
           {/* <ul>
             <li>Отчеты по бюджету</li>
           </ul> */}
         </li>
-        <li className="li">
-          <NavLink className="NavLink" to="Стратегические проекты">
+        <li className={styles.li}>
+          <NavLink className={styles.NavLink} to="Стратегические проекты">
             Стратегические проекты
           </NavLink>
         </li>
-        <li className="li">
-          <NavLink className="NavLink" to="Показатели">
+        <li className={styles.li}>
+          <NavLink className={styles.NavLink} to="Показатели">
             Показатели
           </NavLink>
         </li>
-        <li className="li">
-          <NavLink className="NavLink" to="Политики развития">
+        <li className={styles.li}>
+          <NavLink className={styles.NavLink} to="Политики развития">
             Политики развития
           </NavLink>
         </li>
-        <li className="li">
-          <NavLink className="NavLink" to="Консорциумы">
+        <li className={styles.li}>
+          <NavLink className={styles.NavLink} to="Консорциумы">
             Консорциумы
           </NavLink>
         </li>
