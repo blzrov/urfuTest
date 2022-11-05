@@ -7,10 +7,25 @@
   align-items: center;
   color: white;
   background-color: #090065;
-  ul {
+  align-items: flex-start;
+  .img {
+    align-self: flex-start;
+    padding-left: 24px;
+    margin-bottom: 35px;
+  }
+  .ul {
+    margin: 0;
+    padding: 0;
     list-style: none;
-    a {
-      color: inherit;
+    .li {
+      padding-left: 55px;
+      margin-bottom: 20px;
+    }
+    .NavLink {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 140%;
+      color: white;
       text-decoration: none;
     }
   }

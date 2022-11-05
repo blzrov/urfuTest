@@ -1,19 +1,31 @@
+
+// @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 .tableWithOrder {
   width: 100%;
+  table-layout: fixed;
+  border-spacing: 0 4px;
   text-align: center;
-  border-collapse: collapse;
+  color: #424242;
+  // font-family: 'Open Sans', sans-serif;
   th {
-    border-bottom: 1px solid #212529;
     padding-top: 6px;
-    padding-left: 12px;
     padding-bottom: 14px;
+    border-bottom: 1px solid #212529;
+    font-size: 16px;
     font-weight: 600;
     line-height: 20px;
   }
   td {
-    line-height: 20px;
-    padding: 0 12px 12px 12px;
+    padding-bottom: 12px;
     border-bottom: 1px solid #d4d4d4;
-    max-width: 285px !important;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .bold {
+    font-weight: bold;
+  }
+  .mx {
+    margin: 0 auto;
+    width: 256px;
   }
 }

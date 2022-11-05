@@ -3,7 +3,7 @@ import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Sidebar from "./layout/Sidebar";
 import Header from "./layout/Header";
-import About from "./pages/About";
+import AboutPage from "./pages/AboutPage";
 import ErrorPage from "./pages/ErrorPage";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
           <Header />
           <div className="wrapper">
             <Routes>
-              <Route path="/" element={<About />} />
+              <Route path="/" element={<AboutPage />} />
               <Route path="*" element={<ErrorPage />} />
             </Routes>
           </div>

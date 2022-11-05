@@ -20,7 +20,7 @@ export default function Header() {
         <p className="bottom">Исследовательское лидерство</p>
       </div>
       <Link to="Другие программы" className="other">
-        <b>Другие программы</b>
+        Другие программы
       </Link>
     </div>
   );
