@@ -14,7 +14,6 @@ export default function Header() {
           <b className={styles.red}>лидерами становятся</b>
         </p>
       </div>
-
       <div>
         <p className={styles.top}>Программа развития УрФУ на 2021-2030 годы</p>
         <p className={styles.bottom}>Исследовательское лидерство</p>

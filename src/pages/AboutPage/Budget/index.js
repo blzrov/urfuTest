@@ -16,7 +16,7 @@ export default function Budget() {
         </span>
       </div>
       <StackedBar data={StackedBarData} />
-      <h2>Детализация</h2>
+      <h2 className={styles.title}>Детализация</h2>
       <Accordion blue title="По соглашениям">
         <div className={styles.Stackedwrapper}>
           <StackedBar data={StackedBarData} />
@@ -24,7 +24,7 @@ export default function Budget() {
         </div>
       </Accordion>
 
-      <h2>
+      <h2 className={styles.title}>
         Одобренные средста в проектах определенного типа от общего бюджета
       </h2>
       <DefaultBar data={DefaultBarData} />

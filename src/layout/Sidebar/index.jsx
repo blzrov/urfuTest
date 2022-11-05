@@ -24,9 +24,6 @@ export default function Sidebar() {
           >
             О программе
           </NavLink>
-          {/* <ul>
-            <li>Ключевые индикаторы программы</li>
-          </ul> */}
         </li>
         <li className={styles.li}>
           <NavLink className={styles.NavLink} to="Новости">
@@ -42,9 +39,6 @@ export default function Sidebar() {
           <NavLink className={styles.NavLink} to="Управление бюджетом">
             Управление бюджетом
           </NavLink>
-          {/* <ul>
-            <li>Отчеты по бюджету</li>
-          </ul> */}
         </li>
         <li className={styles.li}>
           <NavLink className={styles.NavLink} to="Стратегические проекты">

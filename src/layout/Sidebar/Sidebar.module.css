@@ -4,16 +4,14 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: center;
   color: white;
   background-color: #090065;
-  align-items: flex-start;
 }
 
 .img {
   align-self: flex-start;
-  padding-left: 24px;
   margin-bottom: 35px;
+  padding-left: 24px;
 }
 
 .ul {
@@ -23,8 +21,8 @@
 }
 
 .li {
-  padding-left: 55px;
   margin-bottom: 20px;
+  padding-left: 55px;
 }
 
 .NavLink {

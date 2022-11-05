@@ -1,10 +1,13 @@
 .back {
   margin-bottom: 24px;
+  color: #656565;
+  cursor: pointer;
 }
 
 .title {
   margin-bottom: 27px;
   font-size: 24px;
+  font-weight: 600;
   color: #0c0065;
 }
 

@@ -3,13 +3,14 @@
 }
 
 .ul {
+  padding: 0;
   display: flex;
   overflow-x: auto;
   list-style: none;
 }
 
 .li {
-  padding-right: 40px;
+  margin-right: 40px;
   min-width: 216px;
 }
 

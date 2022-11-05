@@ -4,8 +4,7 @@ import ExecutionProgress from "./ExecutionProgress";
 import Projects from "./Projects";
 import Budget from "./Budget";
 
-export default function Main() {
-  console.log(styles);
+export default function About() {
   const [page, setPage] = useState(1);
 
   return (

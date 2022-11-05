@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import styles from "./Accordion.module.css";
 
-export default function Accordion({ blue, title, children }) {
+export default function Accordion({ title, children }) {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className={styles.accordion}>
       <div
         onClick={() => setIsOpen((prev) => !prev)}
         className={
-          blue
+          isOpen
             ? `${styles.accordion_header + " " + styles.blue}`
             : `${styles.accordion_header}`
         }
