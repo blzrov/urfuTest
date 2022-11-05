@@ -20,47 +20,45 @@ export default function TableWithOrder() {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td className={styles.td}>1.</td>
-          <td className={styles.td + " " + styles.tac}>
-            Материалы и технологии для водородной и ядерной энергетики
-          </td>
-          <td className={styles.td}>3</td>
-          <td className={styles.bold + " " + styles.td}>2</td>
-        </tr>
-        <tr>
-          <td className={styles.td}>2.</td>
-          <td className={styles.td + " " + styles.tac}>
-            Дизайн и технологии функциональных материалов и систем
-          </td>
-          <td className={styles.td}>9</td>
-          <td className={styles.bold + " " + styles.td}>10</td>
-        </tr>
-        <tr>
-          <td className={styles.td}>3.</td>
-          <td className={styles.td + " " + styles.tac}>
-            Благополучие человека в условиях цифровой трансформации
-          </td>
-          <td className={styles.td}>12</td>
-          <td className={styles.bold + " " + styles.td}>11</td>
-        </tr>
-        <tr>
-          <td className={styles.td}>4.</td>
-          <td className={styles.td + " " + styles.tac}>
-            Академическое превосходство
-          </td>
-          <td className={styles.td}>27</td>
-          <td className={styles.td + " " + styles.bold}>79</td>
-        </tr>
-        <tr>
-          <td className={styles.td}>5.</td>
-          <td className={styles.td + " " + styles.tac}>
-            Образование: кадры для научно-технологического прорыва
-          </td>
-          <td className={styles.td}>15</td>
-          <td className={styles.bold + " " + styles.td}>16</td>
-        </tr>
+        {data.map((elem, index) => {
+          return (
+            <tr key={index}>
+              <td className={styles.td}>{index + 1}</td>
+              <td className={styles.td + " " + styles.tac}>{elem.title}</td>
+              <td className={styles.td}>{elem.plan}</td>
+              <td className={styles.bold + " " + styles.td}>{elem.approved}</td>
+            </tr>
+          );
+        })}
       </tbody>
     </table>
   );
 }
+
+const data = [
+  {
+    title: "Материалы и технологии для водородной и ядерной энергетики",
+    plan: 3,
+    approved: 2,
+  },
+  {
+    title: "Дизайн и технологии функциональных материалов и систем",
+    plan: 9,
+    approved: 10,
+  },
+  {
+    title: "Благополучие человека в условиях цифровой трансформации",
+    plan: 12,
+    approved: 11,
+  },
+  {
+    title: "Академическое превосходство",
+    plan: 27,
+    approved: 79,
+  },
+  {
+    title: "Образование: кадры для научно-технологического прорыва",
+    plan: 16,
+    approved: 16,
+  },
+];

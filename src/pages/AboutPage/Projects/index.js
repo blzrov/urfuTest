@@ -11,7 +11,9 @@ export default function Projects() {
   return (
     <div className={styles.projects}>
       <p>Период</p>
-      <SelectYear />
+      <div>
+        <SelectYear />
+      </div>
       <h2 className={styles.title}>
         Плановое количество проектов программы
         <span className={styles.blue}> - 215</span>
@@ -44,7 +46,9 @@ export default function Projects() {
         Распределение проектов по типам к общему числу проектов
       </h2>
       <p>Период</p>
-      <SelectYear />
+      <div>
+        <SelectYear />
+      </div>
       <Doughnut data={DefaultDoughnutData} />
     </div>
   );

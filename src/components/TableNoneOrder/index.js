@@ -19,17 +19,29 @@ export default function TableNoneOrder() {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td className={styles.first + " " + styles.td}>Базовая часть</td>
-          <td className={styles.td}>3</td>
-          <td className={styles.bold + " " + styles.td}>2</td>
-        </tr>
-        <tr>
-          <td className={styles.first + " " + styles.td}>Специальная часть</td>
-          <td className={styles.td}>9</td>
-          <td className={styles.bold + " " + styles.td}>10</td>
-        </tr>
+        {data.map((elem, index) => {
+          return (
+            <tr key={index}>
+              <td className={styles.first + " " + styles.td}>{elem.title}</td>
+              <td className={styles.td}>{elem.plan}</td>
+              <td className={styles.bold + " " + styles.td}>{elem.approved}</td>
+            </tr>
+          );
+        })}
       </tbody>
     </table>
   );
 }
+
+const data = [
+  {
+    title: "Базовая часть",
+    plan: 3,
+    approved: 2,
+  },
+  {
+    title: "Специальная часть",
+    plan: 9,
+    approved: 10,
+  },
+];

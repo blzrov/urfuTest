@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&subset=cyrillic');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+
+html {
+  overflow-x: hidden;
+  margin-right: calc(-1 * (100vw - 100%));
+}
+
 
 body {
   margin: 0;
@@ -7,4 +13,3 @@ body {
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif; */
 }
-
