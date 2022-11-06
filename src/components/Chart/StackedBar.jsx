@@ -28,6 +28,7 @@ export default function StackedBar({ data }) {
         position: "left",
       },
       legend: {
+        display: true,
         position: "right",
         maxWidth: "300000",
         reverse: true,

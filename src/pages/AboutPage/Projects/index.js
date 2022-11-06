@@ -45,7 +45,7 @@ export default function Projects() {
         Распределение проектов по типам к общему числу проектов
       </h2>
       <p>Период</p>
-      <div>
+      <div style={{ marginBottom: "20px" }}>
         <SelectYear />
       </div>
       <Doughnut data={DefaultDoughnutData} />
@@ -62,7 +62,6 @@ const DefaultDoughnutData = {
     "Предпринимательство и инновации",
     "Социальный",
   ],
-
   datasets: [
     {
       label: "Всего проектов",
