@@ -3,7 +3,6 @@ import styles from "./Projects.module.css";
 import SelectYear from "../../../components/SelectYear";
 import TableWithOrder from "../../../components/TableWithOrder";
 import TableNoneOrder from "../../../components/TableNoneOrder";
-
 import Accordion from "../../../components/Accordion";
 import Doughnut from "../../../components/Chart/Doughnut";
 
