@@ -43,8 +43,8 @@ export default function DefaultBar({ data }) {
   };
 
   return (
-    <div style={{ width: "100%", height: "512px" }}>
-      <Bar options={options} data={data} />
+    <div>
+      <Bar height={512} options={options} data={data} />
     </div>
   );
 }

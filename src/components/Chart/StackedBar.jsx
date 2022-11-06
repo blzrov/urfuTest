@@ -29,10 +29,16 @@ export default function StackedBar({ data }) {
       },
       legend: {
         position: "right",
-        maxWidth: "1000",
+        maxWidth: "300000",
         reverse: true,
         onClick: "return",
+        labels: {
+          boxWidth: 16,
+          boxHeight: 8,
+          font: { size: 16, weight: 600, family: "Open Sans" },
+        },
       },
+      tooltip: { enabled: false },
     },
     scales: {
       x: {
@@ -51,8 +57,8 @@ export default function StackedBar({ data }) {
   };
 
   return (
-    <div style={{ width: "50%", height: "300px" }}>
-      <Bar options={options} data={data} />
+    <div style={{ width: "50%" }}>
+      <Bar height={300} options={options} data={data} />
     </div>
   );
 }

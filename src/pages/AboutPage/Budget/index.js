@@ -55,37 +55,37 @@ const StackedBarData = {
   labels: ["2022"],
   datasets: [
     {
-      label: "Оплачено",
+      label: "589 Оплачено",
       data: [589],
       backgroundColor: "#0A0052",
       barThickness: 70,
     },
     {
-      label: "Законтрактовано",
+      label: "600 Законтрактовано",
       data: [600],
       backgroundColor: "#0A2A9A",
       barThickness: 70,
     },
     {
-      label: "Акцептовано ПФУ",
+      label: "637 Акцептовано ПФУ",
       data: [637],
       backgroundColor: "#305FFD",
       barThickness: 70,
     },
     {
-      label: "Утверждено средств по закупкам",
+      label: "745 Утверждено средств по закупкам",
       data: [745],
       backgroundColor: "#7585D1",
       barThickness: 70,
     },
     {
-      label: "Одобрено средств по проектам",
+      label: "892 Одобрено средств по проектам",
       data: [892],
       backgroundColor: "#B3B9C8",
       barThickness: 70,
     },
     {
-      label: "План по соглашениям",
+      label: "924 План по соглашениям",
       data: [924],
       backgroundColor: "#C2D0EE",
       barThickness: 70,

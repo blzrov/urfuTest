@@ -15,8 +15,8 @@ export default function DefaultDoughnut({ data }) {
   };
 
   return (
-    <div style={{ height: "240px" }}>
-      <Doughnut data={data} options={options} />
+    <div>
+      <Doughnut height={240} data={data} options={options} />
     </div>
   );
 }
