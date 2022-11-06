@@ -21,7 +21,7 @@ export default function DefaultDoughnut({ data }) {
         alignItems: "center",
       }}
     >
-      <div style={{ width: "336px", height: "336px", marginLeft: "80px" }}>
+      <div style={{ width: "336px", height: "336px" }}>
         <Doughnut width={336} height={336} data={data} options={options} />
       </div>
       <div
@@ -31,6 +31,7 @@ export default function DefaultDoughnut({ data }) {
           {data.labels.map((elem, index) => {
             return (
               <div
+                key={index}
                 style={{
                   display: "flex",
                   alignItems: "center",

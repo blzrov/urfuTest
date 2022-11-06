@@ -18,7 +18,7 @@ ChartJS.register(
   Legend
 );
 
-export default function StackedBar({ data }) {
+export default function StackedBar({ data, labels }) {
   const options = {
     maintainAspectRatio: false,
     plugins: {
@@ -28,7 +28,7 @@ export default function StackedBar({ data }) {
         position: "left",
       },
       legend: {
-        display: true,
+        display: false,
         position: "right",
         maxWidth: "300000",
         reverse: true,
@@ -58,8 +58,62 @@ export default function StackedBar({ data }) {
   };
 
   return (
-    <div style={{ width: "50%" }}>
-      <Bar height={300} options={options} data={data} />
+    <div style={{ width: "50%", display: "flex", alignItems: "center" }}>
+      <div style={{ width: "128px", height: "300px" }}>
+        <Bar width={128} height={300} options={options} data={data} />
+      </div>
+      <div style={{ marginLeft: "42px" }}>
+        {data.datasets.map((elem, index) => {
+          return (
+            <div
+              key={index}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                marginBottom: "9px",
+                lineHeight: "20px",
+              }}
+            >
+              <div
+                style={{
+                  width: "34px",
+                  height: "8px",
+                  backgroundColor: elem.backgroundColor,
+                  marginRight: "24px",
+                  lineHeight: "20px",
+                }}
+              ></div>
+              <span
+                style={{
+                  fontSize: "16px",
+                  fontWeight: "600",
+                  marginRight: "24px",
+                  lineHeight: "20px",
+                }}
+              >{`${elem.data[0]} шт `}</span>
+            </div>
+          );
+        })}
+      </div>
+      {labels && (
+        <div style={{ display: "flex", flexDirection: "column" }}>
+          {data.datasets.map((elem, index) => {
+            return (
+              <span
+                style={{
+                  fontSize: "16px",
+                  fontWeight: "600",
+                  color: "#7F7F7F",
+                  marginBottom: "9px",
+                  lineHeight: "20px",
+                }}
+              >
+                {elem.label}
+              </span>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }
