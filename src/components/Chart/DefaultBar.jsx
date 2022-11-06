@@ -26,11 +26,15 @@ export default function DefaultBar({ data }) {
         display: true,
         text: "Бюджет, млн. руб",
         position: "left",
+        font: { size: 16, weight: 500, family: "Open Sans" },
       },
       legend: {
         position: "top",
         onClick: "return",
-        labels: { boxWidth: 0 },
+        labels: {
+          boxWidth: 0,
+          font: { size: 16, family: "Open Sans", weight: "500" },
+        },
       },
     },
     scales: {

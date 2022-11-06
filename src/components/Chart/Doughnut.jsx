@@ -19,6 +19,7 @@ export default function DefaultDoughnut({ data }) {
       style={{
         display: "flex",
         alignItems: "center",
+        justifyContent: "center",
       }}
     >
       <div style={{ width: "336px", height: "336px" }}>

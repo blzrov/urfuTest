@@ -26,6 +26,7 @@ export default function StackedBar({ data, labels }) {
         display: true,
         text: "Бюджет в млн. руб",
         position: "left",
+        font: { size: 16, weight: 500, family: "Open Sans" },
       },
       legend: {
         display: false,
