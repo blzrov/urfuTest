@@ -19,8 +19,8 @@ export default function Budget() {
       <h2 className={styles.title}>Детализация</h2>
       <Accordion blue title="По соглашениям">
         <div className={styles.Stackedwrapper}>
-          <StackedBar data={StackedBarData} />
-          <StackedBar data={StackedBarData} />
+          <StackedBar data={StackedBarData2} />
+          <StackedBar data={StackedBarData3} />
         </div>
       </Accordion>
 
@@ -86,6 +86,90 @@ const StackedBarData = {
     },
     {
       label: "План по соглашениям",
+      data: [924],
+      backgroundColor: "#C2D0EE",
+      barThickness: 70,
+    },
+  ],
+};
+
+const StackedBarData2 = {
+  labels: ["075-15-2021-1331 - Наука и университеты"],
+  datasets: [
+    {
+      label: "589",
+      data: [589],
+      backgroundColor: "#0A0052",
+      barThickness: 70,
+    },
+    {
+      label: "600",
+      data: [600],
+      backgroundColor: "#0A2A9A",
+      barThickness: 70,
+    },
+    {
+      label: "637",
+      data: [637],
+      backgroundColor: "#305FFD",
+      barThickness: 70,
+    },
+    {
+      label: "745",
+      data: [745],
+      backgroundColor: "#7585D1",
+      barThickness: 70,
+    },
+    {
+      label: "892",
+      data: [892],
+      backgroundColor: "#B3B9C8",
+      barThickness: 70,
+    },
+    {
+      label: "924",
+      data: [924],
+      backgroundColor: "#C2D0EE",
+      barThickness: 70,
+    },
+  ],
+};
+
+const StackedBarData3 = {
+  labels: ["075-15-2021-1331 - Развитие кадрового потенциала IT-отрасли"],
+  datasets: [
+    {
+      label: "589",
+      data: [589],
+      backgroundColor: "#0A0052",
+      barThickness: 70,
+    },
+    {
+      label: "600",
+      data: [600],
+      backgroundColor: "#0A2A9A",
+      barThickness: 70,
+    },
+    {
+      label: "637",
+      data: [637],
+      backgroundColor: "#305FFD",
+      barThickness: 70,
+    },
+    {
+      label: "745",
+      data: [745],
+      backgroundColor: "#7585D1",
+      barThickness: 70,
+    },
+    {
+      label: "892",
+      data: [892],
+      backgroundColor: "#B3B9C8",
+      barThickness: 70,
+    },
+    {
+      label: "924",
       data: [924],
       backgroundColor: "#C2D0EE",
       barThickness: 70,

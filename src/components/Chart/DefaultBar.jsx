@@ -29,6 +29,15 @@ export default function DefaultBar({ data }) {
       },
       legend: {
         position: "top",
+        onClick: "return",
+        labels: { boxWidth: 0 },
+      },
+    },
+    scales: {
+      x: {
+        grid: {
+          display: false,
+        },
       },
     },
   };

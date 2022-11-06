@@ -9,6 +9,7 @@ export default function DefaultDoughnut({ data }) {
       legend: {
         display: true,
         position: "right",
+        onClick: "return",
       },
     },
   };

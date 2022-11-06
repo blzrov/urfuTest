@@ -4,6 +4,7 @@
 
 .ul {
   padding: 0;
+  padding-bottom: 60px;
   display: flex;
   overflow-x: auto;
   list-style: none;
@@ -11,7 +12,8 @@
 
 .li {
   margin-right: 40px;
-  min-width: 216px;
+  min-width: 232px;
+  max-width: 232px;
 }
 
 .b {

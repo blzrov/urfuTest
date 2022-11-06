@@ -31,11 +31,15 @@ export default function StackedBar({ data }) {
         position: "right",
         maxWidth: "1000",
         reverse: true,
+        onClick: "return",
       },
     },
     scales: {
       x: {
         stacked: true,
+        grid: {
+          display: false,
+        },
       },
       y: {
         stacked: false,
