@@ -6,6 +6,10 @@ import StackedBar from "../../../components/Chart/StackedBar";
 import DefaultBar from "../../../components/Chart/DefaultBar";
 
 export default function Budget() {
+  const [state, setState] = React.useState(false);
+  function aaa() {
+    setState((prev) => !prev);
+  }
   return (
     <div className={styles.budget}>
       <p style={{ fontWeight: "600" }}>Период</p>
@@ -18,7 +22,63 @@ export default function Budget() {
       <StackedBar labels data={StackedBarData} />
       <h2 className={styles.title}>Детализация</h2>
       <Accordion blue title="По соглашениям">
-        <div className={styles.Stackedwrapper}>
+        <div className={styles.stackedwrapper}>
+          <div className={styles.legendwrapper}>
+            <div style={{ display: "flex" }}>
+              <span onClick={aaa} className={styles.button}>
+                Показать легенду
+              </span>
+            </div>
+            {state && (
+              <div className={styles.legend}>
+                <div>
+                  {StackedBarData3.datasets.map((elem, index) => {
+                    return (
+                      <div
+                        key={index}
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          lineHeight: "20px",
+                        }}
+                      >
+                        <div
+                          style={{
+                            width: "24px",
+                            height: "8px",
+                            marginBottom: "24px",
+                            backgroundColor: elem.backgroundColor,
+                            marginRight: "24px",
+                            lineHeight: "20px",
+                          }}
+                        ></div>
+                      </div>
+                    );
+                  })}
+                </div>
+                {
+                  <div style={{ display: "flex", flexDirection: "column" }}>
+                    {StackedBarData3.datasets.map((elem, index) => {
+                      return (
+                        <span
+                          key={index}
+                          style={{
+                            fontSize: "14px",
+                            fontWeight: "600",
+                            color: "#7F7F7F",
+                            marginBottom: "10px",
+                            lineHeight: "20px",
+                          }}
+                        >
+                          {elem.label}
+                        </span>
+                      );
+                    })}
+                  </div>
+                }
+              </div>
+            )}
+          </div>
           <StackedBar data={StackedBarData2} />
           <StackedBar data={StackedBarData3} />
         </div>

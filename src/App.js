@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./App.module.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Sidebar from "./layout/Sidebar";
-import Header from "./layout/Header";
+import Sidebar from "./components/Sidebar";
+import Header from "./components/Header";
 import AboutPage from "./pages/AboutPage";
 import ErrorPage from "./pages/ErrorPage";
 
