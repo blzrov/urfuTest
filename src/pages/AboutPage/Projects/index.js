@@ -1,37 +1,38 @@
 import React from "react";
 import styles from "./Projects.module.css";
 import SelectYear from "../../../components/SelectYear";
+import Accordion from "../../../components/Accordion";
 import TableWithOrder from "../../../components/TableWithOrder";
 import TableNoneOrder from "../../../components/TableNoneOrder";
-import Accordion from "../../../components/Accordion";
 import Doughnut from "../../../components/Chart/Doughnut";
 
 export default function Projects() {
   return (
     <div className={styles.projects}>
-      <p>Период</p>
+      <p style={{ fontWeight: "600" }}>Период</p>
       <div>
         <SelectYear />
       </div>
       <h2 className={styles.title}>
         Плановое количество проектов программы
-        <span className={styles.blue}> - 215</span>
+        <span className={styles.count}> &mdash; 215</span>
       </h2>
       <div className={styles.mb60}>
         <h2 className={styles.title}>
-          Одобренных проектов на ЭГ<span className={styles.blue}> - 118</span>
+          Одобренных проектов на ЭГ
+          <span className={styles.count}> &mdash; 118</span>
         </h2>
-        <Accordion blue title="Детализация по стратегическим проектам">
+        <Accordion title="Детализация по стратегическим проектам">
           <TableWithOrder />
         </Accordion>
-        <Accordion blue title="Детализация по типу финансирования">
+        <Accordion title="Детализация по типу финансирования">
           <TableNoneOrder />
         </Accordion>
       </div>
       <div className={styles.mb60}>
         <h2 className={styles.title}>
           Одобренных портфелей проектов на ЭГ
-          <span className={styles.blue}> - 97</span>
+          <span className={styles.count}> &mdash; 97</span>
         </h2>
         <Accordion title="Детализация по стратегическим проектам">
           Тут ничего нет
@@ -41,10 +42,10 @@ export default function Projects() {
         </Accordion>
       </div>
 
-      <h2 className={styles.title}>
+      <h2 className={styles.title} style={{ marginBottom: "21px" }}>
         Распределение проектов по типам к общему числу проектов
       </h2>
-      <p>Период</p>
+      <p style={{ fontWeight: "600" }}>Период</p>
       <div style={{ marginBottom: "20px" }}>
         <SelectYear />
       </div>

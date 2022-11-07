@@ -8,7 +8,7 @@ import DefaultBar from "../../../components/Chart/DefaultBar";
 export default function Budget() {
   return (
     <div className={styles.budget}>
-      <p>Период</p>
+      <p style={{ fontWeight: "600" }}>Период</p>
       <div className={styles.period}>
         <SelectYear />
         <span className={styles.info}>
@@ -24,7 +24,7 @@ export default function Budget() {
         </div>
       </Accordion>
 
-      <h2 className={styles.title}>
+      <h2 className={styles.title} style={{ marginBottom: "35px" }}>
         Одобренные средста в проектах определенного типа от общего бюджета
       </h2>
       <DefaultBar data={DefaultBarData} />

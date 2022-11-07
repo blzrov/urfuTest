@@ -9,9 +9,9 @@
 }
 
 .img {
-  align-self: flex-start;
   margin-bottom: 35px;
   padding-left: 24px;
+  align-self: flex-start;
 }
 
 .ul {

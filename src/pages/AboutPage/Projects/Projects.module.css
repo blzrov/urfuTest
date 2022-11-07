@@ -2,13 +2,15 @@
   margin-top: 24px;
 }
 
-.blue {
+.count {
   font-size: 20px;
   font-weight: 600;
   color: #305ffd;
 }
 
 .title {
+  margin-top: 24px;
+  margin-bottom: 24px;
   font-size: 20px;
   font-weight: 600;
 }

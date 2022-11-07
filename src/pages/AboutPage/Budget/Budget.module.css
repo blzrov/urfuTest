@@ -1,22 +1,23 @@
 .budget {
   margin-top: 24px;
 }
+
 .period {
+  margin-bottom: 42px;
   display: flex;
   align-items: center;
-  margin-bottom: 42px;
 }
 
 .info {
   padding-left: 20px;
-  color: #9da7b0;
   font-size: 14px;
+  color: #9da7b0;
 }
 
 .Stackedwrapper {
+  margin-top: 65px;
   display: flex;
   justify-content: flex-start;
-  margin-top: 65px;
 }
 
 .title {

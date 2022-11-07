@@ -1,6 +1,6 @@
 .back {
-  display: inline-block;
   margin-bottom: 24px;
+  display: inline-block;
   color: #656565;
   cursor: pointer;
 }
@@ -14,14 +14,14 @@
 
 .nav {
   display: flex;
-  cursor: pointer;
 }
 
 .nav_item {
-  font-size: 14px;
-  font-weight: 600;
   padding: 10px 15px;
   border-bottom: #d4d4d4 1px solid;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .current {
