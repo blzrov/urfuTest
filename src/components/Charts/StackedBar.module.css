@@ -1,0 +1,50 @@
+.wrapper {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.bar {
+  width: 128px;
+  height: 300px;
+}
+
+.legendwrapper {
+  margin-left: 70px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.countwrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 9px;
+  line-height: 20px;
+}
+
+.box {
+  width: 16px;
+  height: 8px;
+  margin-right: 24px;
+  line-height: 20px;
+}
+
+.text {
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 24px;
+  line-height: 20px;
+}
+
+.labels {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #7f7f7f;
+  margin-bottom: 9px;
+  line-height: 20px;
+}

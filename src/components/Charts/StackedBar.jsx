@@ -1,3 +1,4 @@
+import styles from "./StackedBar.module.css";
 import { Bar } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -59,63 +60,30 @@ export default function StackedBar({ data, labels }) {
   };
 
   return (
-    <div style={{ width: "50%", display: "flex", alignItems: "center" }}>
-      <div style={{ width: "128px", height: "300px" }}>
+    <div className={styles.wrapper}>
+      <div className={styles.bar}>
         <Bar width={128} height={300} options={options} data={data} />
       </div>
-      <div
-        style={{
-          marginLeft: "70px",
-          display: "flex",
-          flexDirection: "column-reverse",
-        }}
-      >
+      <div className={styles.legendwrapper}>
         {data.datasets.map((elem, index) => {
           return (
-            <div
-              key={index}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                marginBottom: "9px",
-                lineHeight: "20px",
-              }}
-            >
+            <div key={index} className={styles.countwrapper}>
               <div
+                className={styles.box}
                 style={{
-                  width: "34px",
-                  height: "8px",
                   backgroundColor: elem.backgroundColor,
-                  marginRight: "24px",
-                  lineHeight: "20px",
                 }}
               ></div>
-              <span
-                style={{
-                  fontSize: "16px",
-                  fontWeight: "600",
-                  marginRight: "24px",
-                  lineHeight: "20px",
-                }}
-              >{`${elem.data[0]} шт `}</span>
+              <span className={styles.text}>{`${elem.data[0]} шт `}</span>
             </div>
           );
         })}
       </div>
       {labels && (
-        <div style={{ display: "flex", flexDirection: "column-reverse" }}>
+        <div className={styles.labels}>
           {data.datasets.map((elem, index) => {
             return (
-              <span
-                key={index}
-                style={{
-                  fontSize: "16px",
-                  fontWeight: "600",
-                  color: "#7F7F7F",
-                  marginBottom: "9px",
-                  lineHeight: "20px",
-                }}
-              >
+              <span key={index} className={styles.label}>
                 {elem.label}
               </span>
             );
