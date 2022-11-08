@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Projects.module.css";
 import SelectYear from "../../../components/SelectYear";
 import Accordion from "../../../components/Accordion";
@@ -7,6 +7,12 @@ import TableNoneOrder from "../../../components/TableNoneOrder";
 import Doughnut from "../../../components/Chart/Doughnut";
 
 export default function Projects() {
+  const [data, setData] = useState({
+    plan: 215,
+    projects: 118,
+    case: 97,
+  });
+
   return (
     <div className={styles.projects}>
       <p style={{ fontWeight: "600" }}>Период</p>
@@ -15,24 +21,24 @@ export default function Projects() {
       </div>
       <h2 className={styles.title}>
         Плановое количество проектов программы
-        <span className={styles.count}> &mdash; 215</span>
+        <span className={styles.count}> &mdash; {data.plan}</span>
       </h2>
       <div className={styles.mb60}>
         <h2 className={styles.title}>
           Одобренных проектов на ЭГ
-          <span className={styles.count}> &mdash; 118</span>
+          <span className={styles.count}> &mdash; {data.projects}</span>
         </h2>
         <Accordion title="Детализация по стратегическим проектам">
-          <TableWithOrder />
+          <TableWithOrder data={TableWithOrderData} />
         </Accordion>
         <Accordion title="Детализация по типу финансирования">
-          <TableNoneOrder />
+          <TableNoneOrder data={TableNoneOrderData} />
         </Accordion>
       </div>
       <div className={styles.mb60}>
         <h2 className={styles.title}>
           Одобренных портфелей проектов на ЭГ
-          <span className={styles.count}> &mdash; 97</span>
+          <span className={styles.count}> &mdash; {data.case}</span>
         </h2>
         <Accordion title="Детализация по стратегическим проектам">
           Тут ничего нет
@@ -53,6 +59,47 @@ export default function Projects() {
     </div>
   );
 }
+
+const TableWithOrderData = [
+  {
+    title: "Материалы и технологии для водородной и ядерной энергетики",
+    plan: 3,
+    approved: 2,
+  },
+  {
+    title: "Дизайн и технологии функциональных материалов и систем",
+    plan: 9,
+    approved: 10,
+  },
+  {
+    title: "Благополучие человека в условиях цифровой трансформации",
+    plan: 12,
+    approved: 11,
+  },
+  {
+    title: "Академическое превосходство",
+    plan: 27,
+    approved: 79,
+  },
+  {
+    title: "Образование: кадры для научно-технологического прорыва",
+    plan: 16,
+    approved: 16,
+  },
+];
+
+const TableNoneOrderData = [
+  {
+    title: "Базовая часть",
+    plan: 3,
+    approved: 2,
+  },
+  {
+    title: "Специальная часть",
+    plan: 9,
+    approved: 10,
+  },
+];
 
 const DefaultDoughnutData = {
   labels: [

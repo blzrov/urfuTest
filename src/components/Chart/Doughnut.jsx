@@ -65,6 +65,7 @@ export default function DefaultDoughnut({ data }) {
           {data.labels.map((elem, index) => {
             return (
               <span
+                key={index}
                 style={{
                   fontSize: "18px",
                   fontWeight: "600",

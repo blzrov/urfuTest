@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Budget.module.css";
 import SelectYear from "../../../components/SelectYear";
 import Accordion from "../../../components/Accordion";
@@ -6,10 +6,11 @@ import StackedBar from "../../../components/Chart/StackedBar";
 import DefaultBar from "../../../components/Chart/DefaultBar";
 
 export default function Budget() {
-  const [state, setState] = React.useState(false);
+  const [state, setState] = useState(false);
   function aaa() {
     setState((prev) => !prev);
   }
+
   return (
     <div className={styles.budget}>
       <p style={{ fontWeight: "600" }}>Период</p>
@@ -31,7 +32,9 @@ export default function Budget() {
             </div>
             {state && (
               <div className={styles.legend}>
-                <div>
+                <div
+                  style={{ display: "flex", flexDirection: "column-reverse" }}
+                >
                   {StackedBarData3.datasets.map((elem, index) => {
                     return (
                       <div
@@ -57,7 +60,9 @@ export default function Budget() {
                   })}
                 </div>
                 {
-                  <div style={{ display: "flex", flexDirection: "column" }}>
+                  <div
+                    style={{ display: "flex", flexDirection: "column-reverse" }}
+                  >
                     {StackedBarData3.datasets.map((elem, index) => {
                       return (
                         <span

@@ -1,11 +1,11 @@
 import styles from "./TableNoneOrder.module.css";
 
-export default function TableNoneOrder() {
+export default function TableNoneOrder({data}) {
   return (
     <table className={styles.tableNoneOrder}>
       <thead>
         <tr>
-          <th className={styles.th + " " + styles.firstTH}>
+          <th className={`${styles.th} ${styles.firstTH}`}>
             Тип финансирования
           </th>
           <th className={styles.th}>
@@ -19,12 +19,12 @@ export default function TableNoneOrder() {
         </tr>
       </thead>
       <tbody>
-        {data.map((elem, index) => {
+        {data?.map((elem, index) => {
           return (
             <tr key={index}>
-              <td className={styles.first + " " + styles.td}>{elem.title}</td>
+              <td className={`${styles.first} ${styles.td}`}>{elem.title}</td>
               <td className={styles.td}>{elem.plan}</td>
-              <td className={styles.bold + " " + styles.td}>{elem.approved}</td>
+              <td className={`${styles.bold} ${styles.td}`}>{elem.approved}</td>
             </tr>
           );
         })}
@@ -32,16 +32,3 @@ export default function TableNoneOrder() {
     </table>
   );
 }
-
-const data = [
-  {
-    title: "Базовая часть",
-    plan: 3,
-    approved: 2,
-  },
-  {
-    title: "Специальная часть",
-    plan: 9,
-    approved: 10,
-  },
-];

@@ -63,7 +63,13 @@ export default function StackedBar({ data, labels }) {
       <div style={{ width: "128px", height: "300px" }}>
         <Bar width={128} height={300} options={options} data={data} />
       </div>
-      <div style={{ marginLeft: "70px" }}>
+      <div
+        style={{
+          marginLeft: "70px",
+          display: "flex",
+          flexDirection: "column-reverse",
+        }}
+      >
         {data.datasets.map((elem, index) => {
           return (
             <div
@@ -97,7 +103,7 @@ export default function StackedBar({ data, labels }) {
         })}
       </div>
       {labels && (
-        <div style={{ display: "flex", flexDirection: "column" }}>
+        <div style={{ display: "flex", flexDirection: "column-reverse" }}>
           {data.datasets.map((elem, index) => {
             return (
               <span

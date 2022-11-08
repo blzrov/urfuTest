@@ -9,13 +9,13 @@ export default function Accordion({ title, children }) {
         onClick={() => setIsOpen((prev) => !prev)}
         className={
           isOpen
-            ? `${styles.accordion_header + " " + styles.blue}`
-            : `${styles.accordion_header}`
+            ? `${styles.accordion_header} ${styles.blue}`
+            : styles.accordion_header
         }
       >
         <span>{title}</span>
         <svg
-          className={!isOpen ? `${styles.open}` : null}
+          className={!isOpen ? styles.open : null}
           width="33"
           height="19"
           viewBox="0 0 33 19"
