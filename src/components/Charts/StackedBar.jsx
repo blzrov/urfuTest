@@ -31,15 +31,6 @@ export default function StackedBar({ data, labels }) {
       },
       legend: {
         display: false,
-        position: "right",
-        maxWidth: "300000",
-        reverse: true,
-        onClick: "return",
-        labels: {
-          boxWidth: 16,
-          boxHeight: 8,
-          font: { size: 16, weight: 600, family: "Open Sans" },
-        },
       },
       tooltip: { enabled: false },
     },

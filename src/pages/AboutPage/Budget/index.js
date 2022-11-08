@@ -7,7 +7,7 @@ import DefaultBar from "../../../components/Charts/DefaultBar";
 
 export default function Budget() {
   const [state, setState] = useState(false);
-  
+
   function toggleLegend() {
     setState((prev) => !prev);
   }
@@ -34,29 +34,23 @@ export default function Budget() {
             {state && (
               <div className={styles.legend}>
                 <div
-                  style={{ display: "flex", flexDirection: "column-reverse" }}
+                  style={{
+                    display: "flex",
+                    flexDirection: "column-reverse",
+                  }}
                 >
                   {StackedBarData3.datasets.map((elem, index) => {
                     return (
                       <div
-                        key={index}
                         style={{
-                          display: "flex",
-                          alignItems: "center",
+                          width: "24px",
+                          height: "8px",
+                          marginBottom: "24px",
+                          backgroundColor: elem.backgroundColor,
+                          marginRight: "24px",
                           lineHeight: "20px",
                         }}
-                      >
-                        <div
-                          style={{
-                            width: "24px",
-                            height: "8px",
-                            marginBottom: "24px",
-                            backgroundColor: elem.backgroundColor,
-                            marginRight: "24px",
-                            lineHeight: "20px",
-                          }}
-                        ></div>
-                      </div>
+                      ></div>
                     );
                   })}
                 </div>

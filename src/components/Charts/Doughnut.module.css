@@ -1,0 +1,50 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.doughnut {
+  width: 336px;
+  height: 336px;
+}
+
+.legendwrapper {
+  margin-left: 160px;
+  display: flex;
+  align-items: center;
+}
+
+.countwrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  line-height: 20px;
+}
+
+.box {
+  width: 34px;
+  height: 8px;
+  margin-right: 24px;
+  line-height: 20px;
+}
+
+.text {
+  font-size: 18px;
+  font-weight: 600;
+  margin-right: 24px;
+  line-height: 20px;
+}
+
+.labels {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 18px;
+  font-weight: 600;
+  color: #7f7f7f;
+  margin-bottom: 24px;
+  line-height: 20px;
+}
