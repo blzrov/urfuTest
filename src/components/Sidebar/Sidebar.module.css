@@ -1,9 +1,9 @@
 .sidebar {
   padding-top: 20px;
   height: 100%;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
   color: white;
   background-color: #090065;
 }

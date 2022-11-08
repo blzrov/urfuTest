@@ -9,7 +9,7 @@ import Doughnut from "../../../components/Charts/Doughnut";
 export default function Projects() {
   return (
     <div className={styles.projects}>
-      <p style={{ fontWeight: "600" }}>Период</p>
+      <p className={styles.fw_600}>Период</p>
       <div>
         <SelectYear />
       </div>
@@ -45,7 +45,7 @@ export default function Projects() {
       <h2 className={styles.title} style={{ marginBottom: "21px" }}>
         Распределение проектов по типам к общему числу проектов
       </h2>
-      <p style={{ fontWeight: "600" }}>Период</p>
+      <p className={styles.fw_600}>Период</p>
       <div style={{ marginBottom: "20px" }}>
         <SelectYear />
       </div>

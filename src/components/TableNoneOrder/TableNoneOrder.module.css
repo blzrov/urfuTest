@@ -26,12 +26,12 @@
   font-weight: bold;
 }
 
-.mx {
+.main {
   margin: 0 auto;
   width: 256px;
 }
 
-.first {
+.firstTD {
   text-align: start;
   padding-left: 17px;
 }

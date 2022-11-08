@@ -9,7 +9,7 @@ export default function ExecutionProgress() {
           <li key={index} className={styles.li}>
             <b
               className={
-                elem.isPassed ? `${styles.b} ${styles.behind}` : `${styles.b}`
+                elem.isPassed ? `${styles.b} ${styles.past}` : `${styles.b}`
               }
             >
               {elem.title}

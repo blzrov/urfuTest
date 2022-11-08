@@ -1,21 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 
 export default function SelectYear() {
-  const [period, setPeriod] = React.useState("2022");
-
-  const handleChange = (event) => {
-    setPeriod(event.target.value);
-  };
+  const [value, setValue] = useState("2022");
 
   return (
     <FormControl sx={{ width: 210 }} size="small">
       <Select
-        value={period}
-        onChange={handleChange}
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
         displayEmpty
         inputProps={{ "aria-label": "Without label" }}
       >

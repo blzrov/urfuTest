@@ -14,7 +14,7 @@ export default function Budget() {
 
   return (
     <div className={styles.budget}>
-      <p style={{ fontWeight: "600" }}>Период</p>
+      <p className={styles.fw_600}>Период</p>
       <div className={styles.period}>
         <SelectYear />
         <span className={styles.info}>
@@ -42,6 +42,7 @@ export default function Budget() {
                   {StackedBarData3.datasets.map((elem, index) => {
                     return (
                       <div
+                        key={index}
                         style={{
                           width: "24px",
                           height: "8px",

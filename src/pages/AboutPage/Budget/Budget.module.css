@@ -45,8 +45,8 @@
 }
 
 .button {
-  padding-left: 26px;
   margin-left: auto;
+  padding-left: 26px;
   cursor: pointer;
   color: #9f9f9f;
   font-size: 12;
@@ -54,4 +54,8 @@
   background-image: url("../../../img/legendbutton.png");
   background-repeat: no-repeat;
   background-position: left;
+}
+
+.fw_600 {
+  font-weight: 600;
 }
