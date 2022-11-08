@@ -4,8 +4,8 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 
-export default function SelectYear() {
-  const [value, setValue] = useState("2022");
+export default function MySelect({ items = [] }) {
+  const [value, setValue] = useState(items[0]);
 
   return (
     <FormControl sx={{ width: 210 }} size="small">
@@ -15,8 +15,11 @@ export default function SelectYear() {
         displayEmpty
         inputProps={{ "aria-label": "Without label" }}
       >
-        <MenuItem value="2022">2022</MenuItem>
-        <MenuItem value="2021">2021</MenuItem>
+        {items.map((elem, index) => (
+          <MenuItem key={index} value={elem}>
+            {elem}
+          </MenuItem>
+        ))}
       </Select>
     </FormControl>
   );

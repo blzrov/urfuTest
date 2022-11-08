@@ -14,20 +14,20 @@
   color: #9da7b0;
 }
 
-.stackedwrapper {
-  margin-top: 65px;
-  display: flex;
-  justify-content: flex-start;
-  position: relative;
-}
-
 .title {
   margin-top: 55px;
   font-size: 20px;
   font-weight: 600;
 }
 
-.legendwrapper {
+.stackeds {
+  margin-top: 65px;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.wrapper_legend {
   position: absolute;
   top: -45px;
   right: 24px;
@@ -46,7 +46,7 @@
   background-color: white;
 }
 
-.button {
+.legend_toggle {
   margin-left: auto;
   padding-left: 26px;
   cursor: pointer;

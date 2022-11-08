@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Projects.module.css";
-import SelectYear from "../../../components/SelectYear";
+import Select from "../../../components/Select";
 import Accordion from "../../../components/Accordion";
 import TableWithOrder from "../../../components/TableWithOrder";
 import TableNoneOrder from "../../../components/TableNoneOrder";
@@ -11,7 +11,7 @@ export default function Projects() {
     <div className={styles.projects}>
       <p className={styles.fw_600}>Период</p>
       <div>
-        <SelectYear />
+        <Select items={[2022, 2021]} />
       </div>
       <h2 className={styles.title}>
         Плановое количество проектов программы
@@ -47,7 +47,7 @@ export default function Projects() {
       </h2>
       <p className={styles.fw_600}>Период</p>
       <div style={{ marginBottom: "20px" }}>
-        <SelectYear />
+        <Select items={[2022, 2021]}  />
       </div>
       <Doughnut data={DefaultDoughnutData} />
     </div>

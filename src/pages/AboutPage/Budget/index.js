@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./Budget.module.css";
-import SelectYear from "../../../components/SelectYear";
+import Select from "../../../components/Select";
 import Accordion from "../../../components/Accordion";
 import StackedBar from "../../../components/Charts/StackedBar";
 import DefaultBar from "../../../components/Charts/DefaultBar";
@@ -12,20 +12,20 @@ export default function Budget() {
     <div className={styles.budget}>
       <p className={styles.fw_600}>Период</p>
       <div className={styles.period}>
-        <SelectYear />
+        <Select items={[2022, 2021]} />
         <span className={styles.info}>
           *Информация представлена по состоянию на 20.09.2022
         </span>
       </div>
       <StackedBar labels data={StackedBarData} />
       <h2 className={styles.title}>Детализация</h2>
-      <Accordion blue title="По соглашениям">
-        <div className={styles.stackedwrapper}>
-          <div className={styles.legendwrapper}>
+      <Accordion title="По соглашениям">
+        <div className={styles.stackeds}>
+          <div className={styles.wrapper_legend}>
             <div style={{ display: "flex" }}>
               <span
                 onClick={() => setIsOpenLegend((prev) => !prev)}
-                className={styles.button}
+                className={styles.legend_toggle}
               >
                 Показать легенду
               </span>
