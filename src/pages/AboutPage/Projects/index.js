@@ -1,18 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./Projects.module.css";
 import SelectYear from "../../../components/SelectYear";
 import Accordion from "../../../components/Accordion";
 import TableWithOrder from "../../../components/TableWithOrder";
 import TableNoneOrder from "../../../components/TableNoneOrder";
-import Doughnut from "../../../components/Chart/Doughnut";
+import Doughnut from "../../../components/Charts/Doughnut";
 
 export default function Projects() {
-  const [data, setData] = useState({
-    plan: 215,
-    projects: 118,
-    case: 97,
-  });
-
   return (
     <div className={styles.projects}>
       <p style={{ fontWeight: "600" }}>Период</p>
@@ -21,12 +15,12 @@ export default function Projects() {
       </div>
       <h2 className={styles.title}>
         Плановое количество проектов программы
-        <span className={styles.count}> &mdash; {data.plan}</span>
+        <span className={styles.count}> &mdash; {count.plan}</span>
       </h2>
       <div className={styles.mb60}>
         <h2 className={styles.title}>
           Одобренных проектов на ЭГ
-          <span className={styles.count}> &mdash; {data.projects}</span>
+          <span className={styles.count}> &mdash; {count.projects}</span>
         </h2>
         <Accordion title="Детализация по стратегическим проектам">
           <TableWithOrder data={TableWithOrderData} />
@@ -38,7 +32,7 @@ export default function Projects() {
       <div className={styles.mb60}>
         <h2 className={styles.title}>
           Одобренных портфелей проектов на ЭГ
-          <span className={styles.count}> &mdash; {data.case}</span>
+          <span className={styles.count}> &mdash; {count.case}</span>
         </h2>
         <Accordion title="Детализация по стратегическим проектам">
           Тут ничего нет
@@ -59,6 +53,12 @@ export default function Projects() {
     </div>
   );
 }
+
+const count = {
+  plan: 215,
+  projects: 118,
+  case: 97,
+};
 
 const TableWithOrderData = [
   {

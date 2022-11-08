@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import styles from "./Budget.module.css";
 import SelectYear from "../../../components/SelectYear";
 import Accordion from "../../../components/Accordion";
-import StackedBar from "../../../components/Chart/StackedBar";
-import DefaultBar from "../../../components/Chart/DefaultBar";
+import StackedBar from "../../../components/Charts/StackedBar";
+import DefaultBar from "../../../components/Charts/DefaultBar";
 
 export default function Budget() {
   const [state, setState] = useState(false);
-  function aaa() {
+  
+  function toggleLegend() {
     setState((prev) => !prev);
   }
 
@@ -26,7 +27,7 @@ export default function Budget() {
         <div className={styles.stackedwrapper}>
           <div className={styles.legendwrapper}>
             <div style={{ display: "flex" }}>
-              <span onClick={aaa} className={styles.button}>
+              <span onClick={toggleLegend} className={styles.button}>
                 Показать легенду
               </span>
             </div>

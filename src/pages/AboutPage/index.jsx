@@ -15,7 +15,7 @@ export default function About() {
         <div
           className={
             page === 1
-              ? `${styles.nav_item + " " + styles.current}`
+              ? `${styles.nav_item} ${styles.current}`
               : `${styles.nav_item}`
           }
           onClick={() => {
@@ -28,7 +28,7 @@ export default function About() {
         <div
           className={
             page === 2
-              ? `${styles.nav_item + " " + styles.current}`
+              ? `${styles.nav_item} ${styles.current}`
               : `${styles.nav_item}`
           }
           onClick={() => {
@@ -41,7 +41,7 @@ export default function About() {
         <div
           className={
             page === 3
-              ? `${styles.nav_item + " " + styles.current}`
+              ? `${styles.nav_item} ${styles.current}`
               : `${styles.nav_item}`
           }
           onClick={() => {
