@@ -11,3 +11,7 @@
   max-width: 80vw;
   padding-bottom: 120px;
 }
+
+@media (max-width: 640px) {
+  /* todo */
+}

@@ -17,7 +17,7 @@ export default function Budget() {
           *Информация представлена по состоянию на 20.09.2022
         </span>
       </div>
-      <StackedBar labels data={StackedBarData} />
+      <StackedBar title="2022" labels data={StackedBarData} />
       <h2 className={styles.title}>Детализация</h2>
       <Accordion title="По соглашениям">
         <div className={styles.stackeds}>
@@ -50,8 +50,14 @@ export default function Budget() {
             )}
           </div>
 
-          <StackedBar data={StackedBarData2} />
-          <StackedBar data={StackedBarData3} />
+          <StackedBar
+            title="075-15-2021-1331 - Наука и университеты"
+            data={StackedBarData2}
+          />
+          <StackedBar
+            title="075-15-2021-1331 - Развитие кадрового потенциала IT-отрасли"
+            data={StackedBarData3}
+          />
         </div>
       </Accordion>
 
@@ -83,7 +89,7 @@ const DefaultBarData = {
 };
 
 const StackedBarData = {
-  labels: ["2022"],
+  labels: [""],
   datasets: [
     {
       label: "Оплачено",
@@ -125,7 +131,7 @@ const StackedBarData = {
 };
 
 const StackedBarData2 = {
-  labels: ["2022"],
+  labels: [""],
   datasets: [
     {
       label: "Оплачено",
@@ -167,7 +173,7 @@ const StackedBarData2 = {
 };
 
 const StackedBarData3 = {
-  labels: ["2022"],
+  labels: [""],
   datasets: [
     {
       label: "Оплачено",

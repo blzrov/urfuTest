@@ -19,7 +19,7 @@ ChartJS.register(
   Legend
 );
 
-export default function StackedBar({ data, labels }) {
+export default function StackedBar({ data, labels, title }) {
   const options = {
     maintainAspectRatio: false,
     plugins: {
@@ -51,36 +51,40 @@ export default function StackedBar({ data, labels }) {
   };
 
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.bar}>
-        <Bar width={128} height={300} options={options} data={data} />
-      </div>
-      <div className={styles.legendwrapper}>
-        {data.datasets.map((elem, index) => {
-          return (
-            <div key={index} className={styles.countwrapper}>
-              <div
-                className={styles.box}
-                style={{
-                  backgroundColor: elem.backgroundColor,
-                }}
-              ></div>
-              <span className={styles.text}>{`${elem.data[0]} шт `}</span>
-            </div>
-          );
-        })}
-      </div>
-      {labels && (
-        <div className={styles.labels}>
+    <div style={{ width: "50%" }}>
+      <div className={styles.wrapper}>
+        <div className={styles.bar}>
+          <Bar width={128} height={300} options={options} data={data} />
+        </div>
+
+        <div className={styles.legendwrapper}>
           {data.datasets.map((elem, index) => {
             return (
-              <span key={index} className={styles.label}>
-                {elem.label}
-              </span>
+              <div key={index} className={styles.countwrapper}>
+                <div
+                  className={styles.box}
+                  style={{
+                    backgroundColor: elem.backgroundColor,
+                  }}
+                ></div>
+                <span className={styles.text}>{`${elem.data[0]} шт `}</span>
+              </div>
             );
           })}
         </div>
-      )}
+        {labels && (
+          <div className={styles.labels}>
+            {data.datasets.map((elem, index) => {
+              return (
+                <span key={index} className={styles.label}>
+                  {elem.label}
+                </span>
+              );
+            })}
+          </div>
+        )}
+      </div>
+      <div className={styles.bar2}>{title}</div>
     </div>
   );
 }

@@ -1,12 +1,23 @@
 .wrapper {
-  width: 50%;
   display: flex;
   align-items: center;
 }
 
 .bar {
   width: 128px;
-  height: 300px;
+  height: 400px;
+  word-break: break-all;
+  display: flex;
+  flex-direction: column;
+}
+
+.bar2 {
+  width: 175px;
+  word-break: break-all;
+  font-size: 14px;
+  font-weight: 600;
+  color: #7f7f7f;
+  text-align: center;
 }
 
 .legendwrapper {
