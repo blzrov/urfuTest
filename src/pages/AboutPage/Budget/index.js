@@ -6,11 +6,7 @@ import StackedBar from "../../../components/Charts/StackedBar";
 import DefaultBar from "../../../components/Charts/DefaultBar";
 
 export default function Budget() {
-  const [state, setState] = useState(false);
-
-  function toggleLegend() {
-    setState((prev) => !prev);
-  }
+  const [isOpenLegend, setIsOpenLegend] = useState(false);
 
   return (
     <div className={styles.budget}>
@@ -27,59 +23,33 @@ export default function Budget() {
         <div className={styles.stackedwrapper}>
           <div className={styles.legendwrapper}>
             <div style={{ display: "flex" }}>
-              <span onClick={toggleLegend} className={styles.button}>
+              <span
+                onClick={() => setIsOpenLegend((prev) => !prev)}
+                className={styles.button}
+              >
                 Показать легенду
               </span>
             </div>
-            {state && (
+
+            {isOpenLegend && (
               <div className={styles.legend}>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column-reverse",
-                  }}
-                >
-                  {StackedBarData3.datasets.map((elem, index) => {
-                    return (
+                {StackedBarData3.datasets.map((elem, index) => {
+                  return (
+                    <div key={index} className={styles.label}>
                       <div
-                        key={index}
+                        className={styles.box}
                         style={{
-                          width: "24px",
-                          height: "8px",
-                          marginBottom: "24px",
                           backgroundColor: elem.backgroundColor,
-                          marginRight: "24px",
-                          lineHeight: "20px",
                         }}
                       ></div>
-                    );
-                  })}
-                </div>
-                {
-                  <div
-                    style={{ display: "flex", flexDirection: "column-reverse" }}
-                  >
-                    {StackedBarData3.datasets.map((elem, index) => {
-                      return (
-                        <span
-                          key={index}
-                          style={{
-                            fontSize: "14px",
-                            fontWeight: "600",
-                            color: "#7F7F7F",
-                            marginBottom: "10px",
-                            lineHeight: "20px",
-                          }}
-                        >
-                          {elem.label}
-                        </span>
-                      );
-                    })}
-                  </div>
-                }
+                      <div className={styles.text}>{elem.label}</div>
+                    </div>
+                  );
+                })}
               </div>
             )}
           </div>
+
           <StackedBar data={StackedBarData2} />
           <StackedBar data={StackedBarData3} />
         </div>
