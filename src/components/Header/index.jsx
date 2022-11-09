@@ -16,7 +16,9 @@ export default function Header() {
       </div>
       <div>
         <p className={styles.top}>Программа развития УрФУ на 2021-2030 годы</p>
-        <p className={styles.bottom}>Исследовательское лидерство</p>
+        <p className={styles.bottom + " " + styles.gradient}>
+          Исследовательское лидерство
+        </p>
       </div>
       <Link className={styles.other} to="Другие программы">
         Другие программы
