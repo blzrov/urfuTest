@@ -84,7 +84,7 @@ export default function StackedBar({ data, labels, title }) {
           </div>
         )}
       </div>
-      <div className={styles.bar2}>{title}</div>
+      <div className={styles.subtitle}>{title}</div>
     </div>
   );
 }
