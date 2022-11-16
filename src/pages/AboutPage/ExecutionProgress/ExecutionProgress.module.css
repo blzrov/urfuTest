@@ -1,5 +1,7 @@
 .executionProgress {
+  position: relative;
   margin-top: 94px;
+  overflow-x: hidden;
 }
 
 .ul {
