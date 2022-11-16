@@ -46,7 +46,7 @@ export default function ExecutionProgress() {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <line y1="1" x2="1137" y2="1" stroke="#D4D4D4" stroke-width="2" />
+        <line y1="1" x2="1137" y2="1" stroke="#D4D4D4" strokeWidth="2" />
       </svg>
 
       <svg
@@ -72,8 +72,8 @@ export default function ExecutionProgress() {
       >
         <circle cx="17" cy="17" r="9" fill="#FD305D" />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M17 34C26.3888 34 34 26.3888 34 17C34 7.61116 26.3888 0 17 0C7.61116 0 0 7.61116 0 17C0 26.3888 7.61116 34 17 34ZM17 31C24.732 31 31 24.732 31 17C31 9.26801 24.732 3 17 3C9.26801 3 3 9.26801 3 17C3 24.732 9.26801 31 17 31Z"
           fill="url(#paint0_linear_33149_141622)"
         />
@@ -86,9 +86,9 @@ export default function ExecutionProgress() {
             y2="16.999"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#FE2E71" />
-            <stop offset="0.48" stop-color="#FB3727" />
-            <stop offset="1" stop-color="#FEEA0F" />
+            <stop stopColor="#FE2E71" />
+            <stop offset="0.48" stopColor="#FB3727" />
+            <stop offset="1" stopColor="#FEEA0F" />
           </linearGradient>
         </defs>
       </svg>
