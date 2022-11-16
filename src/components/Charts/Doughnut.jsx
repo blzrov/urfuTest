@@ -17,6 +17,12 @@ export default function DefaultDoughnut({ data }) {
     <div className={styles.wrapper}>
       <div className={styles.doughnut}>
         <Doughnut width={336} height={336} data={data} options={options} />
+        <span className={styles.summary}>
+          Всего проектов
+          <br />
+          <br />
+          <span className={styles.summary_num}>{data.summary}</span>
+        </span>
       </div>
       <div className={styles.legendwrapper}>
         <div>

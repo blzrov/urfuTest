@@ -44,6 +44,7 @@ export default function DefaultBar({ data }) {
         },
       },
     },
+    
   };
 
   return (

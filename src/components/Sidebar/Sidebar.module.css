@@ -5,7 +5,7 @@
   flex-direction: column;
   box-sizing: border-box;
   color: white;
-  background-color: #090065;
+  background-color: #0c0065;
 }
 
 .img {
@@ -31,4 +31,16 @@
   line-height: 140%;
   color: white;
   text-decoration: none;
+}
+
+.NavLink2 {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  color: white;
+  text-decoration: none;
+  max-width: 120px;
+  display: block;
+  margin-top: 7px;
+  padding-left: 7px;
 }

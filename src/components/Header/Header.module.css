@@ -4,7 +4,7 @@
   align-items: center;
   box-sizing: border-box;
   color: white;
-  background-color: #090065;
+  background-color: #0c0065;
   background-image: url("../../img/header_background.png");
   background-repeat: no-repeat;
   background-position: right;
@@ -29,7 +29,6 @@
 .other {
   margin-left: auto;
   font-size: 16px;
-  font-weight: 600;
   color: white;
   text-decoration: none;
 }
@@ -39,6 +38,8 @@
 }
 
 .gradient {
+  padding-left: 12px;
+  border-left: 1px solid white;
   background-color: white;
   background-image: linear-gradient(90deg, #feea0f, #fb3727, #ff2d7f);
   -webkit-background-clip: text;

@@ -1,7 +1,11 @@
+import React from "react";
 import styles from "./Sidebar.module.css";
-import { NavLink } from "react-router-dom";
+// eslint-disable-next-line
+import { NavLink, Link } from "react-router-dom";
 
 export default function Sidebar() {
+  const [state, setState] = React.useState("/");
+
   return (
     <div className={styles.sidebar}>
       <img
@@ -13,7 +17,7 @@ export default function Sidebar() {
         <li className={styles.li}>
           <NavLink
             className={styles.NavLink}
-            to="/"
+            to="about"
             style={({ isActive }) =>
               isActive
                 ? {
@@ -22,8 +26,26 @@ export default function Sidebar() {
                 : undefined
             }
           >
-            О программе
+            {({ isActive }) => {
+              console.log(isActive);
+              isActive ? setState("/") : setState(null);
+              return "О программе";
+            }}
           </NavLink>
+          {state === "/" ? (
+            <ul className={styles.ul}>
+              <li>
+                <NavLink
+                  className={styles.NavLink2}
+                  to="/about/Ключевые индикаторы программы"
+                >
+                  Ключевые индикаторы программы
+                </NavLink>
+              </li>
+            </ul>
+          ) : (
+            ""
+          )}
         </li>
         <li className={styles.li}>
           <NavLink className={styles.NavLink} to="Новости">
@@ -62,5 +84,16 @@ export default function Sidebar() {
         </li>
       </ul>
     </div>
+  );
+}
+// eslint-disable-next-line
+function Li({ title, subLi }) {
+  return (
+    <>
+      {title}
+      <ul className={styles.ul}>
+        <li>123</li>
+      </ul>
+    </>
   );
 }

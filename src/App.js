@@ -15,7 +15,7 @@ function App() {
           <Header />
           <div className={styles.wrapper}>
             <Routes>
-              <Route path="/" element={<AboutPage />} />
+              <Route path="about" element={<AboutPage />} />
               <Route path="*" element={<ErrorPage />} />
             </Routes>
           </div>

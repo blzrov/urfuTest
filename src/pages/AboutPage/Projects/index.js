@@ -47,7 +47,7 @@ export default function Projects() {
       </h2>
       <p className={styles.fw_600}>Период</p>
       <div style={{ marginBottom: "20px" }}>
-        <Select items={[2022, 2021]}  />
+        <Select items={[2022, 2021]} />
       </div>
       <Doughnut data={DefaultDoughnutData} />
     </div>
@@ -102,6 +102,7 @@ const TableNoneOrderData = [
 ];
 
 const DefaultDoughnutData = {
+  summary: 215,
   labels: [
     "Научный",
     "Организационный",
