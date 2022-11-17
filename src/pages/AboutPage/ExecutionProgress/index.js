@@ -63,7 +63,7 @@ export default function ExecutionProgress() {
 
       <svg
         ref={current}
-        style={{ position: "absolute", bottom: 50 }}
+        style={{ position: "absolute", bottom: 50, backgroundColor: "white" }}
         width="34"
         height="34"
         viewBox="0 0 34 34"
