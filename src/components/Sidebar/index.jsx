@@ -4,7 +4,7 @@ import styles from "./Sidebar.module.css";
 import { NavLink, Link } from "react-router-dom";
 
 export default function Sidebar() {
-  const [state, setState] = React.useState("about");
+  const [state, setState] = React.useState("");
 
   return (
     <div className={styles.sidebar}>
@@ -27,7 +27,11 @@ export default function Sidebar() {
             }
           >
             {({ isActive }) => {
-              if (isActive) setState("about");
+              if (isActive) {
+                setState("about");
+              } else {
+                setState(null);
+              }
               return "О программе";
             }}
           </NavLink>
