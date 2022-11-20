@@ -35,7 +35,11 @@ export default function ExecutionProgress() {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M18.5 33L3 17.5L18.5 2" stroke="#D4D4D4" strokeWidth="3" />
+          <path
+            d="M18.5 33L3 17.5L18.5 2"
+            stroke={ul?.current?.scrollLeft === 0 ? "#D4D4D4" : "#E86868"}
+            strokeWidth="3"
+          />
         </svg>
       </span>
 
