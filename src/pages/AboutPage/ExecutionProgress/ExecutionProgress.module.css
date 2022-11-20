@@ -2,13 +2,16 @@
   position: relative;
   margin-top: 94px;
   overflow-x: hidden;
+  overflow-y: hidden;
+  height: 350px;
 }
 
 .ul {
+  position: relative;
   padding: 0;
   padding-bottom: 60px;
   display: flex;
-  overflow-x: auto;
+  overflow-x: hidden;
   list-style: none;
 }
 
@@ -16,6 +19,7 @@
   margin-right: 40px;
   min-width: 232px;
   max-width: 232px;
+  user-select: none;
 }
 
 .b {
